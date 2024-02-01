@@ -26,7 +26,7 @@ jobs:
           ssh-keyscan -H $EC2_IP_ADDRESS >> $HOME/.ssh/known_hosts
         env:
           EC2_IP_ADDRESS: ${{ secrets.SERVER }}
-          HOME: ${{secrets.HOME}}
+          HOME: ${{ secrets.HOME }}
 
       - name: Push code to EC2
         run: |
