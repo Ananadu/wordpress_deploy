@@ -35,7 +35,7 @@ jobs:
           DEST_DIR="/var/www/html/wordpress/"
 
           # Use rsync with SSH key authentication and compression
-          rsync -avz --delete-after --no-times --exclude='.git' -e "ssh -i $SSH_AUTH_SOCK" "$SOURCE_DIR" "ubuntu@$EC2_IP:$DEST_DIR"
+          rsync -avz --delete-after --no-times --exclude='.git' -e "ssh -i $SSH_AUTH_SOCK" "$SOURCE_DIR" "root@$EC2_IP:$DEST_DIR"
 
         env:
           EC2_IP_ADDRESS: ${{ secrets.SERVER }}
