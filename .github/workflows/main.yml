@@ -38,4 +38,4 @@ jobs:
           rsync -avz --delete-after --exclude='.git' -e "ssh -i $SSH_AUTH_SOCK" "$SOURCE_DIR" "ubuntu@$EC2_IP:$DEST_DIR"
 
         env:
-          EC2_IP_ADDRESS: ${{ secrets.EC2_IP_ADDRESS }}
+          EC2_IP_ADDRESS: ${{ secrets.SERVER }}
