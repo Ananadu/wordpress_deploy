@@ -40,3 +40,4 @@ jobs:
         env:
           EC2_IP_ADDRESS: ${{ secrets.SERVER }}
           USER: ${{ secrets.USER }}
+          SH_PRIVATE_KEY: ${{ secrets.SSH_PRIVATE_KEY }}
